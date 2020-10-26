@@ -178,37 +178,7 @@
         </footer> 
         <link rel="stylesheet" href="css/style.css">
         <script>
-           const ipad = window.matchMedia('screen and (max-width: 767px)');
-            const menu = document.querySelector('.menu');
-            // console.log(menu);
-            const burgerbutton = document.querySelector('#burger-menu');
-            // console.log(burgerbutton);
-
-
-            ipad.addListener(validation)
-
-            function validation (event) {
-                if (event.matches) {
-
-                     burgerbutton.addEventListener('click', hideShow)
-                }
-
-                else{
-                     burgerbutton.removeEventListener('click', hideShow)
-
-                }
-            }
-            validation(ipad);
-            
-            function hideShow() {
-             if (menu.classList.contains('is-active')) {
-                 menu.classList.remove('is-active');
-             }
-             else {
-
-            menu.classList.add('is-active');
-             }
-            }
+          function validation(a){a.matches?burgerbutton.addEventListener("click",hideShow):burgerbutton.removeEventListener("click",hideShow)}function hideShow(){menu.classList.contains("is-active")?menu.classList.remove("is-active"):menu.classList.add("is-active")}const ipad=window.matchMedia("screen and (max-width: 767px)"),menu=document.querySelector(".menu"),burgerbutton=document.querySelector("#burger-menu");ipad.addListener(validation),validation(ipad);
         </script>
         <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap" rel="stylesheet">
     </body>
